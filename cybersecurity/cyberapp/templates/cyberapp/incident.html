@@ -1,0 +1,20 @@
+{% extends 'cyberapp/base.html' %}
+
+{% block title %}Add Skill{% endblock %}
+
+{% block content %}
+    <h1>Submit Incident Details</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label for="incident_type">Select Incident Type:</label>
+        <select id="incident_type" name="incident_type">
+            <option value="phishing">Phishing</option>
+            <option value="malware">Malware</option>
+            <option value="data_breach">Data Breach</option>
+            <option value="ddos">DDoS Attack</option>
+            <option value="ransomware">Ransomware</option>
+        </select>
+        <br><br>
+        <button type="submit">Analyze with AI</button>
+    </form>
+{% endblock %}

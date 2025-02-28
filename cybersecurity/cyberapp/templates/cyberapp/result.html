@@ -1,0 +1,34 @@
+{% extends 'cyberapp/base.html' %}
+
+{% block title %}Add Skill{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <!-- Title -->
+        <h1 class="text-center mb-4">Analysis Result</h1>
+
+        <!-- Card for Dynamic Content -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h4>AI Analysis</h4>
+            </div>
+            <div class="card-body">
+                {% for key, value in analysis.items %}
+            <p><strong>{{ key|capfirst }}:</strong> {{ value }}</p>
+        {% endfor %}
+                <div>
+
+    </div>
+            </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="text-center mt-4">
+            <a href="{% url 'analyze_threat' %}" class="btn btn-primary btn-lg">
+                Analyze Another
+
+            </a>
+            {{analysis}}
+        </div>
+    </div>
+{% endblock %}

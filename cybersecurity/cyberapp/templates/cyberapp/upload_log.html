@@ -1,0 +1,16 @@
+{% extends 'cyberapp/base.html' %}
+
+{% block title %}Add Skill{% endblock %}
+
+{% block content %}
+        <h1 class="text-center">Log File Analysis</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="log_file" class="form-label">Upload your log file:</label>
+                <input type="file" class="form-control" id="log_file" name="log_file" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Analyze</button>
+        </form>
+    </div>
+{% endblock %}

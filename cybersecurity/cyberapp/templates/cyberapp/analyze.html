@@ -1,0 +1,15 @@
+{% extends 'cyberapp/base.html' %}
+
+{% block title %}Add Skill{% endblock %}
+
+{% block content %}
+        <h1 class="text-center">Cybersecurity Threat Analysis</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="input_text" class="form-label">Enter text to analyze:</label>
+                <textarea class="form-control" id="input_text" name="input_text" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Analyze</button>
+        </form>
+{% endblock %}

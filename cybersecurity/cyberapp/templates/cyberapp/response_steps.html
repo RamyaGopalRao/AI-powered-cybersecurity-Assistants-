@@ -1,0 +1,16 @@
+{% extends 'cyberapp/base.html' %}
+
+{% block title %}Add Skill{% endblock %}
+
+{% block content %}
+    <h1>Incident Response Steps</h1>
+
+    <p>Here are the recommended steps for the selected incident type:</p>
+
+    <ul>
+       {{steps}}
+    </ul>
+
+    <br>
+    <a href="{% url 'incident_response' %}">Report Another Incident</a>
+{% endblock %}

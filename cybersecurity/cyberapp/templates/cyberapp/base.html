@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Template</title>
+</head>
+<body>
+    <h1>Welcome to the Incident Management System</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'analyze_threat' %}">Analyze Threat</a></li>
+            <li><a href="{% url 'analyze_log' %}">Upload Log</a></li>
+            <li><a href="{% url 'incident_response' %}">Incident Response</a></li>
+            <li><a href="{% url 'incident_file' %}">Incident File</a></li>
+        </ul>
+    </nav>
+    <div>
+        <!-- Content will be rendered here -->
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
